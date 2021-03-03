@@ -22,3 +22,15 @@ ex)m=Prophet()
    m.plot(forecast)
    m.plot_components(forecast)
  
+# 4.판다스 datetimeindex와 resample
+resample 연산을 쓰면 시간 간격을 재조정하는 리샘플링(resampling)이 가능하다
+<img width="771" alt="다운로드" src="https://user-images.githubusercontent.com/78473055/109786015-14048300-7c50-11eb-9185-d721ed5ef15f.png">
+
+chicago_df.resample('Y').size()
+year_df = chicago_df.resample('Y').size()
+
+plt.plot(year_df)
+plt.show()
+
+
+![다운로드 (1)](https://user-images.githubusercontent.com/78473055/109786221-4c0bc600-7c50-11eb-90be-224c77c1d52a.png)
